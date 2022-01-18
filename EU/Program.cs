@@ -11,10 +11,12 @@ namespace EU
         static void Main(string[] args)
         {
             List<csatlakozas> orszagok = new List<csatlakozas>();
-            foreach (var sor in File.ReadAllLines("EUcsatlakozas.txt").Skip(1))
+            foreach (var sor in File.ReadAllLines("EUcsatlakozas.txt"))
             {
                 orszagok.Add(new csatlakozas(sor));
             }
+            Console.WriteLine($"3.feladat: Az Eu tagállamainak száma: {orszagok.Count} db");
+            
         }
     }
 }
