@@ -21,6 +21,8 @@ namespace EU
                 .Where(x => x.orsz == "Magyarország").First();
             Console.WriteLine($"5.feladat: Magyarország csatlakozásának a dátuma: {hun.datum:d}");
             Console.WriteLine($"6.feladat: Májusban {(orszagok.Any(x=>x.datum.Month==05)?"volt":"nem volt")} csatlakozás!");
+            Console.WriteLine($"7.feladat: Statisztika");
+            orszagok.GroupBy(x => x.datum.Year).Select(x => new { d = x.Key, c = x.Count() }).ToList().ForEach(x => Console.WriteLine($"\t{x.d} - {x.c}"));
         }
     }
 }
