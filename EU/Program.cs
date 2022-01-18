@@ -16,7 +16,7 @@ namespace EU
                 orszagok.Add(new csatlakozas(sor));
             }
             Console.WriteLine($"3.feladat: Az Eu tagállamainak száma: {orszagok.Count} db");
-            
+            Console.WriteLine($"4.feladat: 2007-ben {orszagok.Count(x=>x.datum.Year==2007)} ország csatlakozott.");
         }
     }
 }
