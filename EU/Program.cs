@@ -20,6 +20,7 @@ namespace EU
             csatlakozas hun = orszagok
                 .Where(x => x.orsz == "Magyarország").First();
             Console.WriteLine($"5.feladat: Magyarország csatlakozásának a dátuma: {hun.datum:d}");
+            Console.WriteLine($"6.feladat: Májusban {(orszagok.Any(x=>x.datum.Month==05)?"volt":"nem volt")} csatlakozás!");
         }
     }
 }
