@@ -17,6 +17,9 @@ namespace EU
             }
             Console.WriteLine($"3.feladat: Az Eu tagállamainak száma: {orszagok.Count} db");
             Console.WriteLine($"4.feladat: 2007-ben {orszagok.Count(x=>x.datum.Year==2007)} ország csatlakozott.");
+            csatlakozas hun = orszagok
+                .Where(x => x.orsz == "Magyarország").First();
+            Console.WriteLine($"5.feladat: Magyarország csatlakozásának a dátuma: {hun.datum:d}");
         }
     }
 }
